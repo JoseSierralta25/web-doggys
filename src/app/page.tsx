@@ -193,10 +193,11 @@ export default function DoggysLanding() {
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
       
       {/* Header / Navbar (Premium Glassmorphism) */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-zinc-100 flex items-center justify-between px-6 py-4 sticky top-0 z-50 h-[72px] transition-all">
-        <div className="text-[#E62020] font-black text-2xl tracking-tighter">DOGGY'S</div>
+      <header className="bg-white/80 backdrop-blur-md border-b border-zinc-100 flex items-center justify-between px-4 md:px-6 py-4 sticky top-0 z-50 h-[72px] transition-all">
+        <div className="text-[#E62020] font-black text-xl md:text-2xl tracking-tighter shrink-0">DOGGY'S</div>
         
-        <nav className="hidden md:flex gap-6 text-sm">
+        {/* Navigation */}
+        <nav className="flex gap-3 md:gap-6 text-xs md:text-sm font-medium items-center ml-auto md:ml-0 mr-4 md:mr-0">
           <a href="#" onClick={(e) => { e.preventDefault(); setIsMenuModalOpen(false); window.scrollTo(0,0); }} className="relative text-zinc-700 font-bold tracking-wide hover:text-[#E62020] transition-colors py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[#E62020] after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100">
             Inicio
           </a>
@@ -208,39 +209,41 @@ export default function DoggysLanding() {
           </a>
         </nav>
 
-        <div className="relative hidden sm:block">
-          <button 
-            onClick={() => setIsHeaderWaMenuOpen(!isHeaderWaMenuOpen)}
-            className="bg-[#E62020] text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden group relative"
-          >
-            <span className="relative z-10">Pedir por WhatsApp</span>
-            {/* Destello sutil al hacer hover */}
-            <div className="absolute inset-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
-          </button>
-          
-          {isHeaderWaMenuOpen && (
-            <div className="absolute top-full mt-2 right-0 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 w-64 origin-top-right transition-all animate-in fade-in slide-in-from-top-4 duration-200">
-              <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 text-center">¿Dónde estás ubicado?</h4>
-              <div className="flex flex-col gap-2">
-                <a 
-                  href={`https://wa.me/584244322496?text=${encodedMessage}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
-                >
-                  Sede Centro
-                </a>
-                <a 
-                  href={`https://wa.me/58146078591?text=${encodedMessage}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
-                >
-                  Sede La Puerta
-                </a>
+        <div className="flex items-center gap-4">
+          <div className="relative hidden sm:block">
+            <button 
+              onClick={() => setIsHeaderWaMenuOpen(!isHeaderWaMenuOpen)}
+              className="bg-[#E62020] text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden group relative"
+            >
+              <span className="relative z-10">Pedir por WhatsApp</span>
+              {/* Destello sutil al hacer hover */}
+              <div className="absolute inset-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+            </button>
+            
+            {isHeaderWaMenuOpen && (
+              <div className="absolute top-full mt-2 right-0 bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 w-64 origin-top-right transition-all animate-in fade-in slide-in-from-top-4 duration-200">
+                <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 text-center">¿Dónde estás ubicado?</h4>
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href={`https://wa.me/584244322496?text=${encodedMessage}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
+                  >
+                    Sede Centro
+                  </a>
+                  <a 
+                    href={`https://wa.me/58146078591?text=${encodedMessage}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
+                  >
+                    Sede La Puerta
+                  </a>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </header>
 
