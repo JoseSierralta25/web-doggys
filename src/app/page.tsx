@@ -167,7 +167,7 @@ export default function DoggysLanding() {
     });
     msg += `%0A*Total a Pagar: $${cartTotal.toFixed(2)} USD*%0A%0A`;
     msg += `¿Me confirman si tienen disponibilidad para proceder con el pago y envío? ¡Muchas gracias!`;
-    return `https://wa.me/${phone}?text=${msg}`;
+    return "https://wa.me/" + phone + "?text=" + msg;
   };
 
   const waMessage = "¡Hola Doggy's! 👋 Vi la página web y quiero hacer un pedido.";
@@ -225,7 +225,7 @@ export default function DoggysLanding() {
                 <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 text-center">¿Dónde estás ubicado?</h4>
                 <div className="flex flex-col gap-2">
                   <a 
-                    href={`https://wa.me/584244322496?text=${encodedMessage}`} 
+                    href={"https://wa.me/584244322496?text=" + encodedMessage}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
@@ -233,7 +233,7 @@ export default function DoggysLanding() {
                     Sede Centro
                   </a>
                   <a 
-                    href={`https://wa.me/584146078591?text=${encodedMessage}`} 
+                    href={"https://wa.me/584146078591?text=" + encodedMessage}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
@@ -276,7 +276,7 @@ export default function DoggysLanding() {
                   <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 text-center">¿Dónde estás ubicado?</h4>
                   <div className="flex flex-col gap-2">
                     <a 
-                      href={`https://wa.me/584244322496?text=${encodedMessage}`} 
+                      href={"https://wa.me/584244322496?text=" + encodedMessage}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
@@ -284,7 +284,7 @@ export default function DoggysLanding() {
                       Sede Centro
                     </a>
                     <a 
-                      href={`https://wa.me/58146078591?text=${encodedMessage}`} 
+                      href={"https://wa.me/584146078591?text=" + encodedMessage}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
@@ -586,7 +586,7 @@ export default function DoggysLanding() {
                   <span className="text-xs bg-zinc-700 px-2 py-1 rounded group-hover:bg-zinc-600 transition-colors">📲 Enviar</span>
                 </a>
                 <a 
-                  href={generateWhatsAppOrderLink("58146078591")}
+                  href={generateWhatsAppOrderLink("584146078591")}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setCheckoutModalOpen(false)}
@@ -677,7 +677,7 @@ export default function DoggysLanding() {
             <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 text-center">¿Dónde estás ubicado?</h4>
             <div className="flex flex-col gap-2">
               <a 
-                href={`https://wa.me/584244322496?text=${encodedMessage}`} 
+                href={"https://wa.me/584244322496?text=" + encodedMessage}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
@@ -685,7 +685,7 @@ export default function DoggysLanding() {
                 Sede Centro
               </a>
               <a 
-                href={`https://wa.me/58146078591?text=${encodedMessage}`} 
+                href={"https://wa.me/584146078591?text=" + encodedMessage}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
