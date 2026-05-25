@@ -233,7 +233,7 @@ export default function DoggysLanding() {
                     Sede Centro
                   </a>
                   <a 
-                    href={`https://wa.me/58146078591?text=${encodedMessage}`} 
+                    href={`https://wa.me/584146078591?text=${encodedMessage}`} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-all duration-200 text-center shadow-md block"
